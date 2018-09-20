@@ -113,6 +113,48 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &471801090
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4545778046136708, guid: 407a85847c5d7f5448383ae26acb7cd4, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4545778046136708, guid: 407a85847c5d7f5448383ae26acb7cd4, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 6.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 4545778046136708, guid: 407a85847c5d7f5448383ae26acb7cd4, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4545778046136708, guid: 407a85847c5d7f5448383ae26acb7cd4, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4545778046136708, guid: 407a85847c5d7f5448383ae26acb7cd4, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4545778046136708, guid: 407a85847c5d7f5448383ae26acb7cd4, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4545778046136708, guid: 407a85847c5d7f5448383ae26acb7cd4, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4545778046136708, guid: 407a85847c5d7f5448383ae26acb7cd4, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 407a85847c5d7f5448383ae26acb7cd4, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -240,7 +282,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1897447015
   m_SortingLayer: 2
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: eeba2ee7805c8f94cb665855c357c5b8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -350,6 +392,7 @@ GameObject:
   - component: {fileID: 1978445391}
   - component: {fileID: 1978445390}
   - component: {fileID: 1978445389}
+  - component: {fileID: 1978445392}
   - component: {fileID: 1978445388}
   m_Layer: 0
   m_Name: Doge
@@ -451,3 +494,48 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!68 &1978445392
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1978445387}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: 0.83587396, y: 0.4931494}
+  - {x: 1.0355648, y: 0.5057943}
+  - {x: 1.1136475, y: 0.51729465}
+  - {x: 1.1370742, y: 0.52680355}
+  - {x: 1.1276762, y: 0.5403217}
+  - {x: 1.1811738, y: 0.5234826}
+  - {x: 1.2149287, y: 0.47040814}
+  - {x: 1.2030686, y: -0.008569926}
+  - {x: 0.9737673, y: -0.2252255}
+  - {x: 1.0750724, y: -0.6922908}
+  - {x: 1.3570255, y: -0.1871458}
+  - {x: 1.4041721, y: 0.10687564}
+  - {x: 1.4724418, y: -0.060892932}
+  - {x: 1.5862637, y: 0.099623434}
+  - {x: 1.551979, y: -0.16867283}
+  - {x: 1.4831754, y: -0.62677646}
+  - {x: 1.3285296, y: -0.89205736}
+  - {x: 1.1213739, y: -1.0480711}
+  - {x: 1.1129062, y: -1.2241635}
+  - {x: -1.1748776, y: -1.2362937}
+  - {x: -1.2073698, y: -0.543478}
+  - {x: -1.2988088, y: -0.42566988}
+  - {x: -1.3651563, y: 0.018395722}
+  - {x: -1.3083061, y: 0.3701373}
+  - {x: -0.76009345, y: 0.3637128}
+  - {x: -1.0601305, y: -1.1337311}
+  - {x: 0.9016404, y: -1.1088252}
+  - {x: 0.7798004, y: 0.17771706}
+  - {x: 0.8012551, y: 0.27557787}
+  - {x: 0.82692456, y: 0.50579435}
