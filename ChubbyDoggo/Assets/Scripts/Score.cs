@@ -13,15 +13,15 @@ public class Score : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         score = 0;
-        scoreText.text = "";
-    }
-
-    private void OnTriggerEnter2D() {
-        score += carrotValue;
         UpdateScore();
     }
 
-    public void setText(){
+    private void OnTriggerEnter2D(Collider2D collision) {
+        if (collision.gameObject.tag == "Chocolate") {
+            score -= (carrotValue * 2);
+        } else if (collision.gameObject.tag == "Carrot") {
+            score += carrotValue;
+        }
         UpdateScore();
     }
 

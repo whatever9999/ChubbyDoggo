@@ -276,9 +276,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 0}
-  carrot: {fileID: 1523309203259526, guid: 407a85847c5d7f5448383ae26acb7cd4, type: 2}
+  droppables:
+  - {fileID: 1523309203259526, guid: 407a85847c5d7f5448383ae26acb7cd4, type: 2}
+  - {fileID: 1431218599930288, guid: a373f64e68742e241a73b83b84a91565, type: 2}
+  - {fileID: 1523309203259526, guid: 407a85847c5d7f5448383ae26acb7cd4, type: 2}
   renderer: {fileID: 0}
-  timeLeft: 10
+  timeLeft: 20
   timerText: {fileID: 845159664}
   gameOver: {fileID: 925123862}
   restartButton: {fileID: 18479573}

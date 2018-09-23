@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class GameController : MonoBehaviour {
 
     public Camera cam;
-    public GameObject carrot;
+    public GameObject[] droppables;
     public new Renderer renderer;
     private float maxWidth;
     public float timeLeft = 0;
@@ -17,11 +17,10 @@ public class GameController : MonoBehaviour {
     public GameObject startButton;
     private bool playing;
     public DogeController dogeController;
-    public Score score;
 
     // Use this for initialization
     void Start() {
-        renderer = carrot.GetComponent<Renderer>();
+        renderer = droppables[0].GetComponent<Renderer>();
 
         if (cam == null) {
             cam = Camera.main;
@@ -31,7 +30,7 @@ public class GameController : MonoBehaviour {
         Vector3 targetWidth = cam.ScreenToWorldPoint(upperCorner);
         float carrotWidth = renderer.bounds.extents.x;
         maxWidth = targetWidth.x - carrotWidth;
-        timerText.text = "";
+        UpdateText();
     }
 
     void FixedUpdate() {
@@ -49,7 +48,6 @@ public class GameController : MonoBehaviour {
         splashScreen.SetActive(false);
         startButton.SetActive(false);
         UpdateText();
-        score.setText();
         dogeController.ToggleControl(true);
         StartCoroutine(Spawn());
     }
@@ -58,10 +56,11 @@ public class GameController : MonoBehaviour {
         yield return new WaitForSeconds(2.0f);
         playing = true;
         while (timeLeft > 0) {
+            GameObject droppable = droppables[Random.Range(0, droppables.Length)];
             Vector3 spawnPosition = new Vector3(Random.Range(-maxWidth + 1, maxWidth - 1), transform.position.y, 0.0f);
             Quaternion spawnRotation = Quaternion.identity;
-            Instantiate(carrot, spawnPosition, spawnRotation);
-            yield return new WaitForSeconds(Random.Range(1.0f, 2.0f));
+            Instantiate(droppable, spawnPosition, spawnRotation);
+            yield return new WaitForSeconds(Random.Range(0.5f, 1.0f));
         }
         yield return new WaitForSeconds(0.2f);
         gameOver.SetActive(true);
